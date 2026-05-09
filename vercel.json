@@ -12,9 +12,9 @@
       "methods": ["POST", "OPTIONS"]
     },
     {
-      "src": "/trigger_words.txt",
-      "dest": "/trigger_words.txt"
-    },
+  "src": "/trigger_words.html",
+  "dest": "/trigger_words.html"
+    }
     {
       "src": "/(.*)",
       "dest": "/app.py"
