@@ -590,8 +590,7 @@
             const start = Date.now();
 
             try {
-                const res = await fetch('http://127.0.0.1:5000/app', {
-                    method: 'POST',
+                const res = await fetch('/api/chat', {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ message })
                 });
