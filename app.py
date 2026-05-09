@@ -57,6 +57,10 @@ client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 def home():
     html_path = os.path.join(BASE_DIR, 'index.html')
     return send_file(html_path)
+@app.route('/trigger_words.html')
+def hint():
+    html_path = os.path.join(BASE_DIR, 'trigger_words.html')
+    return send_file(html_path)
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
