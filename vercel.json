@@ -7,15 +7,6 @@
   ],
   "routes": [
     {
-      "src": "/api/chat",
-      "dest": "/app.py",
-      "methods": ["POST", "OPTIONS"]
-    },
-    {
-  "src": "/trigger_words.html",
-  "dest": "/trigger_words.html"
-    }
-    {
       "src": "/(.*)",
       "dest": "/app.py"
     }
