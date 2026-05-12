@@ -62,6 +62,13 @@ def hint():
     html_path = os.path.join(BASE_DIR, 'trigger_words.html')
     return send_file(html_path)
 
+@app.route('/debug')
+def debug():
+    key = os.environ.get("GROQ_API_KEY")
+    if key:
+        return jsonify({"key_found": True, "starts_with": key[:8]})
+    return jsonify({"key_found": False})
+    
 @app.route('/api/chat', methods=['POST'])
 def chat():
     data = request.json
